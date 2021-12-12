@@ -9,8 +9,8 @@
     <Grid Background="#000" Opacity="0.8">
         <StackPanel VerticalAlignment="Center">
             <Label Content="Введите количество игроков: " HorizontalAlignment="Center" Padding="30, 10" VerticalAlignment="Top" Foreground="#fff" FontSize="18"/>
-            <TextBox HorizontalAlignment="Center" Padding="30, 10" Margin="0, 10, 0, 10" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Background="#000" Foreground="#fff" FontSize="16"/>
-            <Button Content="Начать" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 10, 0, 10" Padding="30, 10" FontSize="16"/>
+            <TextBox x:Name="countPlayersField" HorizontalAlignment="Center" Padding="30, 10" Margin="0, 10, 0, 10" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Background="#000" Foreground="#fff" FontSize="16"/>
+            <Button Content="Начать" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 10, 0, 10" Padding="30, 10" FontSize="16" Click="StartGame"/>
         </StackPanel>
     </Grid>
 </Window>

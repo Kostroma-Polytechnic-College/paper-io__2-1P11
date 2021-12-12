@@ -24,5 +24,18 @@ namespace paper_io
         {
             InitializeComponent();
         }
+
+        private void StartGame(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int countPlayers = Convert.ToInt32(countPlayersField.Text);
+                Game ther = new Game(countPlayers);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка введенных данных. Пожалуйста введите корректные данные!"); ;
+            }
+        }
     }
 }
