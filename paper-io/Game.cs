@@ -31,7 +31,7 @@ namespace paper_io
             if (locations.Count() != 0)
             {
                 Random rnd = new Random();
-                Point location = locations[rnd.Next(locations.Count())]; // Если полей для появления игрока несколько, то выбрается случайным образом одно.
+                Point location = locations[rnd.Next(locations.Count())];
                 CreatePlayer(location);
             }
         }
