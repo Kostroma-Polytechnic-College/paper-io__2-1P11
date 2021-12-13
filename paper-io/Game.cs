@@ -15,7 +15,7 @@ namespace paper_io
         {
             this.field = new Player[10 * players, 10 * players] ;
         }
-        public void StartGame() // Этот метод должен вызываться из конструктора при создании игры.
+        public void StartGame()
         {
             List<Point> locations = new List<Point>();
             for (int row = 0; row < field.GetLength(0) - 2; row++)
