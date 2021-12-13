@@ -13,7 +13,19 @@ namespace paper_io
         List<Player> players = new List<Player>();
         public Game(int players)
         {
-            this.field = new Player[10 * players, 10 * players] ;
+            this.field = new Player[10 * players, 10 * players];
+        }
+        public void PlacePlayer(Player player, Point point)
+        {
+            int x =(int)point.X;
+            int y = (int)point.Y;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    field[i + y, j + x] = player;
+                }
+            }
         }
         public void StartGame()
         {
@@ -60,5 +72,6 @@ namespace paper_io
                     field[i, j] = player;
                 }
             }
+        }
     }
 }
