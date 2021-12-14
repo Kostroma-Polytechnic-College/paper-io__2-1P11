@@ -34,9 +34,6 @@ namespace paper_io
                 StartGameWindow game = new StartGameWindow(countPlayers);
                 this.Close();
                 game.Show();
-                // game.ViewModel = countPlayersField.Text;
-                // game.ShowViewModel();
-
             }
             catch (Exception)
             {
