@@ -3,24 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace paper_io
 {
     class Player
     {
-        Random rnd = new Random();
-        private int[] color;
+        private Color color;
 
-        public Player()
+        public Player(Color playerColor)
         {
-            this.color = GenerateColorPlayer();
-        }
-
-        private int[] GenerateColorPlayer()
-        {
-            int[] color = new int[] { rnd.Next(0, 10), rnd.Next(0, 10), rnd.Next(0, 10) };
-            Console.WriteLine(color);
-            return color;
+            this.color = playerColor;
         }
     }
 }

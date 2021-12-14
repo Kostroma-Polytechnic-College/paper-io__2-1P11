@@ -29,13 +29,21 @@ namespace paper_io
         {
             try
             {
-                int countPlayers = Convert.ToInt32(countPlayersField.Text);
-                Game ther = new Game(countPlayers);
+                int countPlayers = int.Parse(countPlayersField.Text);
+
+                StartGameWindow game = new StartGameWindow(countPlayers);
+                this.Close();
+                game.Show();
+                // game.ViewModel = countPlayersField.Text;
+                // game.ShowViewModel();
+
             }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка введенных данных. Пожалуйста введите корректные данные!"); ;
             }
         }
+
+        
     }
 }
