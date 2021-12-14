@@ -13,8 +13,9 @@ namespace paper_io
 
         public Game(int countPlayers)
         {
-            this.countPlayers = countPlayers;
-            GeneretePlayers(countPlayers);
+            int countPlayers = Convert.ToInt32(countPlayersField.Text);
+            // Console.WriteLine(countPlayers);
+            Game game = new Game(countPlayers);
 
         }
 
