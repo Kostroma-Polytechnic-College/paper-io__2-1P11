@@ -19,16 +19,9 @@ namespace paper_io
     /// </summary>
     public partial class StartGameWindow : Window
     {
-        public string ViewModel { get; set; }
-
         public StartGameWindow(int countPlayers)
         {
             InitializeComponent();
-        }
-
-        public void ShowViewModel()
-        {
-            MessageBox.Show(ViewModel);
         }
     }
 }

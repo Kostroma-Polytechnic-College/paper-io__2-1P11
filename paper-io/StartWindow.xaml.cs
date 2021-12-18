@@ -32,7 +32,7 @@ namespace paper_io
                 int countPlayers = int.Parse(countPlayersField.Text);
 
                 StartGameWindow game = new StartGameWindow(countPlayers);
-                this.Close();
+                this.Hide();
                 game.Show();
             }
             catch (Exception)

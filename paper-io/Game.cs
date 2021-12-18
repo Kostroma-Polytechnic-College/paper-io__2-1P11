@@ -10,7 +10,6 @@ namespace paper_io
     class Game
     {
         private Player[,] gamematrix;
-        private int countPlayers;
         private List<Player> players;
         private List<Color> colorsList = new List<Color>
         {
