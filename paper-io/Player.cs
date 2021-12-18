@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace paper_io
 {
-    class Player
+    public class Player
     {
         public Point point;
         public int AxisX
@@ -21,6 +21,10 @@ namespace paper_io
         public Player(Point location)
         {
             point = location;
+        }
+        public void PlumeOfPlayer() // Шлейф
+        {
+
         }
     }
 }

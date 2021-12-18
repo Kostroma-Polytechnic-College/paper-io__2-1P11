@@ -26,6 +26,9 @@ namespace paper_io
                     field[i + y, j + x] = player;
                 }
             }
+            player.point = new Point(x + 1, y + 1);
+
+
         }
         public void StartGame()
         {
