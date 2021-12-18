@@ -28,11 +28,6 @@ namespace paper_io
 
         public Game(int countPlayers)
         {
-            this.countPlayers = countPlayers;
-        }
-
-        private void GeneretePlayers(int countPlayers)
-        {
             for (int i = 0; i < countPlayers; i++)
             {
                 this.players.Add(new Player(this.colorsList[i]));
