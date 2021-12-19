@@ -19,62 +19,14 @@ namespace paper_io
         {
             int x =(int)point.X;
             int y = (int)point.Y;
-            for (int i = 0; i < 3; i++)
+            for (int i = x; i < x + 3; i++)
             {
-                for (int j = 0; j < 3; j++)
-                {
-                    field[i + y, j + x] = player;
-                }
-            }
-            player.point = new Point(x + 1, y + 1);
-
-
-        }
-        public void StartGame()
-        {
-            List<Point> locations = new List<Point>();
-            for (int row = 0; row < field.GetLength(0) - 2; row++)
-            {
-                for (int column = 0; column < field.GetLength(0) - 2; column++)
-                {
-                    if (CheckPoint(row, column))
-                    {
-                        locations.Add(new Point(row, column));
-                    }
-                }
-            }
-            if (locations.Count() != 0)
-            {
-                Random rnd = new Random();
-                Point location = locations[rnd.Next(locations.Count())];
-                CreatePlayer(location);
-            }
-        }
-        private bool CheckPoint(int row, int column)
-        {
-            for (int r = row; r < row + 3; r++)
-            {
-                for (int c = column; c < column + 3; c++)
-                {
-                    if (field[r, c] != null) return false;
-                }
-            }
-            return true;
-        }
-        /// <summary>
-        /// Метод для создания игрока на поле размером 3х3
-        /// </summary>
-        public void CreatePlayer(Point location)
-        {
-            Player player = new Player(new Point(location.X + 1, location.Y + 1));
-            players.Add(player);
-            for (int i = (int)location.X; i < location.X + 3; i++)
-            {
-                for (int j = (int)location.Y; j < (int)location.Y + 3; j++)
+                for (int j = y; j < y + 3; j++)
                 {
                     field[i, j] = player;
                 }
             }
+            player.point = new Point(x + 1, y + 1);
         }
     }
 }
