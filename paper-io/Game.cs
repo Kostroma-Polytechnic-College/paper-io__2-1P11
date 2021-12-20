@@ -10,7 +10,7 @@ namespace paper_io
 {
     class Game
     {
-        private Player[,] gamematrix;
+        private Player[,] field;
         private List<Player> players;
         private static List<Color> colorsList = new List<Color>
         {
@@ -28,7 +28,7 @@ namespace paper_io
 
         public Game(int countPlayers)
         {
-            gamematrix = new Player[countPlayers * 10, countPlayers * 10];
+            field = new Player[countPlayers * 10, countPlayers * 10];
             for (int i = 0; i < countPlayers; i++)
             {
                 this.players.Add(new Player(new Point(), colorsList[i]));
@@ -37,12 +37,13 @@ namespace paper_io
         public void PlacePlayer(Player player, Point point)
         {
             int x = (int)point.X;
+
             int y = (int)point.Y;
             for (int i = x; i < x + 3; i++)
             {
                 for (int j = y; j < y + 3; j++)
                 {
-                    gamematrix[i, j] = player;
+                    field[i, j] = player;
                 }
             }
             player.Location = new Point(x + 1, y + 1);
