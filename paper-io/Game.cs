@@ -10,10 +10,12 @@ namespace paper_io
     public class Game
     {
         public Player[,] field;
-        List<Player> players = new List<Player>();
+        List<Player> Players = new List<Player>();
         public Game(int players)
         {
             field = new Player[10 * players, 10 * players];
+            for (int i = 0; i < players; i++)
+                Players.Add(new Player(new Point()));
         }
         public void PlacePlayer(Player player, Point point)
         {
