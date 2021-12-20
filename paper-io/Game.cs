@@ -11,7 +11,7 @@ namespace paper_io
     {
         private Player[,] gamematrix;
         private List<Player> players;
-        private List<Color> colorsList = new List<Color>
+        private static List<Color> colorsList = new List<Color>
         {
             (Color)ColorConverter.ConvertFromString("#FFFF0000"),
             (Color)ColorConverter.ConvertFromString("#FF0000FF"),

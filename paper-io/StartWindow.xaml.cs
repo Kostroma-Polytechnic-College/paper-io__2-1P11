@@ -33,7 +33,8 @@ namespace paper_io
 
                 StartGameWindow game = new StartGameWindow(countPlayers);
                 this.Hide();
-                game.Show();
+                game.ShowDialog();
+                this.Show();
             }
             catch (Exception)
             {
