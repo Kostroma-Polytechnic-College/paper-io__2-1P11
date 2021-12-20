@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Windows;
 
 namespace paper_io
 {
@@ -27,10 +28,24 @@ namespace paper_io
 
         public Game(int countPlayers)
         {
+            gamematrix = new Player[countPlayers * 10, countPlayers * 10];
             for (int i = 0; i < countPlayers; i++)
             {
-                this.players.Add(new Player(colorsList[i]));
+                this.players.Add(new Player(new Point(), colorsList[i]));
             }
+        }
+        public void PlacePlayer(Player player, Point point)
+        {
+            int x = (int)point.X;
+            int y = (int)point.Y;
+            for (int i = x; i < x + 3; i++)
+            {
+                for (int j = y; j < y + 3; j++)
+                {
+                    gamematrix[i, j] = player;
+                }
+            }
+            player.Location = new Point(x + 1, y + 1);
         }
     }
 }
