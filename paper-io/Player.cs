@@ -22,9 +22,5 @@ namespace paper_io
         {
             point = location;
         }
-        public void PlumeOfPlayer()
-        {
-            
-        }
     }
 }
