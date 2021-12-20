@@ -29,7 +29,7 @@ namespace paper_io
         {
             for (int i = 0; i < countPlayers; i++)
             {
-                this.players.Add(new Player(this.colorsList[i]));
+                this.players.Add(new Player(colorsList[i]));
             }
         }
     }
