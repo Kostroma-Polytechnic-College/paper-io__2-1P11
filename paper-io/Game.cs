@@ -9,11 +9,11 @@ namespace paper_io
 {
     public class Game
     {
-        Player[,] field;
+        public Player[,] field;
         List<Player> players = new List<Player>();
         public Game(int players)
         {
-            this.field = new Player[10 * players, 10 * players];
+            field = new Player[10 * players, 10 * players];
         }
         public void PlacePlayer(Player player, Point point)
         {
@@ -26,7 +26,7 @@ namespace paper_io
                     field[i, j] = player;
                 }
             }
-            player.point = new Point(x + 1, y + 1);
+            player.Location = new Point(x + 1, y + 1);
         }
     }
 }

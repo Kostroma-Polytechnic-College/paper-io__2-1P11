@@ -9,18 +9,10 @@ namespace paper_io
 {
     public class Player
     {
-        public Point point;
-        public int AxisX
-        {
-            get { return (int)point.X; }
-        }
-        public int AxisY
-        {
-            get { return (int)point.Y; }
-        }
+        public Point Location;
         public Player(Point location)
         {
-            point = location;
+            Location = location;
         }
     }
 }
