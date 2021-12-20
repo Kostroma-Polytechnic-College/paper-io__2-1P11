@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace paper_io
 {
-    class Game
+    public class Game
     {
         private Player[,] field;
         private List<Player> players;

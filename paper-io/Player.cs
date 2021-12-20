@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace paper_io
 {
-    class Player
+    public class Player
     {
         private Color color;
         public Point Location;
