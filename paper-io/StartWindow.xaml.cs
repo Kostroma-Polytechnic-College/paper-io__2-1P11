@@ -27,19 +27,11 @@ namespace paper_io
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                int countPlayers = int.Parse(countPlayersField.Text);
-
-                StartGameWindow game = new StartGameWindow(countPlayers);
-                this.Hide();
-                game.ShowDialog();
-                this.Show();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ошибка введенных данных. Пожалуйста введите корректные данные!");
-            }
+            int countPlayers = int.Parse(countPlayersField.Text);
+            StartGameWindow game = new StartGameWindow(countPlayers);
+            this.Hide();
+            game.ShowDialog();
+            this.Show();
         }
     }
 }
